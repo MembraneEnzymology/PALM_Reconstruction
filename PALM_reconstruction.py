@@ -1,3 +1,25 @@
+"""
+This script processes localization data from a CSV file to generate a PALM (Photo-Activated Localization Microscopy) 
+reconstruction. It includes functionality to simulate the spatial distribution of molecules using Gaussian functions 
+based on localization uncertainty values.
+
+The script performs the following:
+1. Reads x, y coordinates and localization uncertainties from a CSV file.
+2. Converts the coordinates and uncertainties from nanometers to micrometers.
+3. Reconstructs a high-resolution image using the PALM technique by overlaying Gaussian distributions at each 
+   localization point.
+4. Visualizes the reconstructed image using a heatmap.
+
+Functions:
+- draw_gaussian: Adds a Gaussian distribution centered at a specified point to an image.
+- palm: Reconstructs a high-resolution PALM image based on the localization data.
+
+Authors:
+- D. Linnik (d.linnik at rug.nl)
+- C.M. Punter (c.m.punter at rug.nl)
+Membrane Enzymology, University of Groningen, 2024.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
